@@ -1,0 +1,82 @@
+<body class="table">
+{% extends 'layout.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.css"/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js' defer></script>
+    <script src="/static/manager.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}
+
+    <div id="header">
+        <h1 id="press-button">Press deal cards button</h1>
+    </div>
+
+    <div class="test">
+
+        <div id="container-opponent">
+        </div>
+
+        <div id="container-middle">
+        </div>
+
+        <div id="container-hand">
+        </div>
+    </div>
+
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+        <div class="nav navbar-nav navbar-center">
+            <button type="button" class="btn btn-primary">Deal cards</button>
+            <button type="button" class="btn btn-success">UNO</button>
+            <button type="button" class="btn btn-danger">Reset</button>
+        </div>
+    </nav>
+
+    <div id="countdown"></div>
+    <h1 class="message"></h1>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1 style="font-family: Anton, 'sans-serif', monospace"></h1>
+        </div>
+
+    </div>
+
+
+    <div id="myModal2" class="modal-s">
+
+        <div class="modal-content">
+            <span class="close2">&times;</span>
+            <h2 style="font-family: Anton, 'sans-serif', monospace">Choose your color!</h2>
+            <select class="dropdown">
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+            </select>
+            <br>
+            <h2 style="font-family: Anton, 'sans-serif', monospace">Switch players then push the button!</h2>
+            <br>
+            <button class="btn btn-success validation">Ok</button>
+        </div>
+
+    </div>
+
+    <div id="myModal" class="myModal3">
+
+        <div class="modal-content">
+            <span class="close3">&times;</span>
+            <h1 style="font-family: Anton, 'sans-serif', monospace">Switch players!</h1>
+        </div>
+
+    </div>
+
+{% endblock %}
+</body>
